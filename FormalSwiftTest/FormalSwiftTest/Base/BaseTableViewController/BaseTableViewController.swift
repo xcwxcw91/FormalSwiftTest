@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UIViewController {
 
     weak var tableView : UITableView!
-    var dataSource = [BaseTableViewCellModel]()
+    var dataSource = [BaseTableViewSectionModel]()
     
     override func loadView() {
         
@@ -39,14 +39,21 @@ class BaseTableViewController: UIViewController {
 //MARK: - TableView Delegate && Datasource
 extension BaseTableViewController : UITableViewDataSource{
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return self.dataSource.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        let sectionModel = self.dataSource[section];
+        return sectionModel.cellModelCount()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let item = self.dataSource[indexPath.row]
+        let section = self.dataSource[indexPath.section]
+        let item = section.cellModelAtIndex(indexPath.row)
         
         var cell = tableView.dequeueReusableCell(withIdentifier: item.cellReuseIdentifer) as? BaseTableViewCell
         
@@ -57,7 +64,7 @@ extension BaseTableViewController : UITableViewDataSource{
             cell = newCellClass.init(style: .default, reuseIdentifier: String(describing: item.cellReuseIdentifer))
         }
         
-        cell!.setCellData(cellModel: item)
+        cell!.setCellData(sectionModel: section, cellModel: item)
         return cell!
     }
 }
@@ -66,7 +73,8 @@ extension BaseTableViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let item = self.dataSource[indexPath.row]
+        let section = self.dataSource[indexPath.section]
+        let item = section.cellModelAtIndex(indexPath.row)
         
         return item.rowHeight
     }

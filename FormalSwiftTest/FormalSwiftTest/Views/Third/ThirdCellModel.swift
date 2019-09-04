@@ -8,36 +8,73 @@
 
 import UIKit
 
-class ThirdCellModel: BaseTableViewCellModel {
+class ThirdRedCellModel: BaseTableViewCellModel {
 
-    var privateProperty : String = "ThirdRedTableViewCell"
-   
+    var title : String?
+    var subtitle : String?
+    var imageName : String?
+
+    fileprivate var _redCellClass: UITableViewCell.Type?
     override var cellClass: UITableViewCell.Type{
-        
-        return ThirdRedTableViewCell.self
+
+        set{
+            _redCellClass = newValue
+        }
+        get{
+            return _redCellClass ?? ThirdRedTableViewCell.self
+        }
     }
-    
+
+    fileprivate var _cellReuseIdentifer : String?
     override var cellReuseIdentifer: String{
-        return String(describing: ThirdRedTableViewCell.self)
+
+        get{
+            return _cellReuseIdentifer ?? String(describing: ThirdRedTableViewCell.self)
+        }
+        set{
+            _cellReuseIdentifer = newValue
+        }
     }
 }
 
-class ThirdCellModel1: BaseTableViewCellModel {
+class ThirdGreenCellModel: BaseTableViewCellModel {
     
-    var privateProperty : String = "ThirdGreenTableViewCell"
-  
+    var greenTitle : String?
+    var greenSubtitle : String?
+    var greenImageName : String?
+    
+    fileprivate var _greenCellClass: UITableViewCell.Type?
     override var cellClass: UITableViewCell.Type{
         
-        return ThirdGreenTableViewCell.self
+        set{
+            _greenCellClass = newValue
+        }
+        get{
+            return _greenCellClass ?? ThirdGreenTableViewCell.self
+        }
     }
     
+    fileprivate var _cellReuseIdentifer : String?
     override var cellReuseIdentifer: String{
-        return String(describing: ThirdGreenTableViewCell.self)
+        
+        get{
+            return _cellReuseIdentifer ?? String(describing: ThirdGreenTableViewCell.self)
+        }
+        set{
+            _cellReuseIdentifer = newValue
+        }
     }
     
+    fileprivate var _rowHeight = 100.0
     override var rowHeight: CGFloat{
         
-        return 100
+        get{
+            return CGFloat(_rowHeight)
+        }
+        set{
+            _rowHeight = Double(newValue)
+            print(_rowHeight)
+        }
     }
 }
 

@@ -10,33 +10,28 @@ import UIKit
 
 class ThirdRedTableViewCell: BaseTableViewCell {
     
-
-    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override func initialize(){
         
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.initialize()
-    }
+        super.initialize()
     
-    required init?(coder aDecoder: NSCoder) {
-        
-        super.init(coder: aDecoder)
-        self.initialize()
-    }
-    
-    func initialize(){
-        
+        self.contentView.backgroundColor = .red
+        self.textLabel?.backgroundColor = .clear
         self.imageView?.frame = CGRect.init(x: 10, y: 10, width: 40, height: 40)
     }
     
 
-    override func setCellData(cellModel model: BaseTableViewCellModel) {
+    override func setCellData(sectionModel sectionModel:BaseTableViewSectionModel ,cellModel model: BaseTableViewCellModel) {
         
-        if model is ThirdCellModel{
+        if model is ThirdRedCellModel{
             
-            self.contentView.backgroundColor = .red
-            self.textLabel?.backgroundColor = .clear
-            self.textLabel?.text = "red"
-            self.imageView?.image = UIImage(named: "cake")
+            let redModel = model as! ThirdRedCellModel
+            
+            self.textLabel?.text = redModel.title
+            self.detailTextLabel?.text = redModel.subtitle
+            if let img = redModel.imageName {
+                
+                self.imageView?.image = UIImage(named: img)
+            }
         }
     }
     
@@ -45,7 +40,6 @@ class ThirdRedTableViewCell: BaseTableViewCell {
         
         self.textLabel?.text = nil
         self.imageView?.image = nil
-        self.contentView.backgroundColor = .clear
         
     }
 }
