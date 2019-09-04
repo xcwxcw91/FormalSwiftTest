@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -40,6 +41,7 @@ class CustomTableViewCell: UITableViewCell {
         titleLabel.font = UIFont.systemFont(ofSize: 16)
         self.titleLabel = titleLabel
         
+        
         let coverView = UIImageView.init(frame: CGRect.init(x: 10, y: 10, width: 50, height: 50))
         coverView.contentMode = .scaleAspectFit
         self.coverView = coverView;
@@ -47,5 +49,27 @@ class CustomTableViewCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(coverView)
         
+       
+
+        
+    }
+    
+//    override func layoutSubviews() {
+//
+//        super.layoutSubviews()
+//        self.coverView.snp.makeConstraints { (ConstraintMaker) in
+//
+//            ConstraintMaker.width.equalTo(100)
+//            ConstraintMaker.height.equalTo(100)
+//            ConstraintMaker.center.equalTo(self.contentView)
+//        }
+//    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        self.coverView.backgroundColor = selected ? .red : .clear
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        self.coverView.backgroundColor = highlighted ? .blue : .clear
     }
 }

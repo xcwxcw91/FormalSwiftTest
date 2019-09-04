@@ -15,7 +15,9 @@ class SecondViewController: UIViewController {
     let detailCellIdentifer = "detailCellIdentifer"
     let customCellIdentifer = "customCellIdentifer"
     
-    var items: [String] = [
+    var dataSource : [SecondModel] = []
+    
+    let items: [String] = [
         "👽", "🐱", "🐔", "🐶", "🦊", "🐵", "🐼", "🐷", "💩", "🐰",
         "🤖", "🦄", "🐻", "🐲", "🦁", "💀", "🐨", "🐯", "👻", "🦖",
         ]
@@ -43,6 +45,25 @@ class SecondViewController: UIViewController {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        self.getData()
+    }
+    
+    //GET DATA
+    func getData(){
+        
+        
+        for i in 0 ..< items.count {
+            
+            let model = SecondModel()
+            model.titleName = items[i]
+            model.coverImageName = i%2 == 0 ? "Swift_logo" : "cake"
+            model.height = Float(40 * i)
+        
+            self.dataSource.append(model)
+        }
+        
+//        self.tableView.reloadData()
     }
 }
 
@@ -58,11 +79,11 @@ extension SecondViewController : UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier:customCellIdentifer, for: indexPath) as! CustomTableViewCell
         
-        let item = self.items[indexPath.row]
+        let item = self.dataSource[indexPath.row]
         
-        cell.titleLabel.text = item
+        cell.titleLabel.text = item.titleName
         
-        cell.coverView.image = UIImage(named: "Swift_logo")
+        cell.coverView.image = UIImage(named: item.coverImageName ?? "")
         
         return cell
     }
@@ -74,7 +95,9 @@ extension SecondViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
      
-        return 100
+        let model = self.dataSource[indexPath.row]
+        
+        return model.height == 0 ? 40 : CGFloat(model.height)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

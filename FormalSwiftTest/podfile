@@ -1,0 +1,11 @@
+
+platform :ios, "9.0"
+use_frameworks!
+
+target 'FormalSwiftTest' do
+  
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'Alamofire', '~> 4.7.3'
+  pod 'AlamofireObjectMapper', '~> 5.1.0'
+
+end

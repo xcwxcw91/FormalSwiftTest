@@ -25,6 +25,7 @@ class DetailTableViewCell: UITableViewCell {
     
     func initialize(){
         
+        self.contentView.backgroundColor = .red
     }
     
     override func prepareForReuse() {
