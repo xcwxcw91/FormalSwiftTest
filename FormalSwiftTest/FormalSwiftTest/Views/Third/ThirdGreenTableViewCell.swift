@@ -19,11 +19,11 @@ class ThirdGreenTableViewCell: BaseTableViewCell {
         self.textLabel?.backgroundColor = .clear
     }
     
-    override func setCellData(sectionModel sectionModel:BaseTableViewSectionModel ,cellModel model: BaseTableViewCellModel) {
+    override func setCellData(_ sectionModel:BaseTableViewSectionModel ,_ cellModel: BaseTableViewCellModel) {
        
-        if model is ThirdGreenCellModel{
+        if cellModel is ThirdGreenCellModel{
             
-            let greenModel =  model as! ThirdGreenCellModel
+            let greenModel =  cellModel as! ThirdGreenCellModel
             
             self.textLabel?.text = greenModel.greenTitle
             self.detailTextLabel?.text = greenModel.greenSubtitle

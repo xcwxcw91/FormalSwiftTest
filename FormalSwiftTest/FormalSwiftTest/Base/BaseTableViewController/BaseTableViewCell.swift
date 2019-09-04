@@ -29,7 +29,7 @@ class BaseTableViewCell: UITableViewCell {
     
     public func initialize(){}
     
-    public func setCellData(sectionModel sectionModel:BaseTableViewSectionModel  ,cellModel model: BaseTableViewCellModel){}
+    public func setCellData(_ sectionModel:BaseTableViewSectionModel  ,_ cellModel: BaseTableViewCellModel){}
 
 
     override func awakeFromNib() {

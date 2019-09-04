@@ -20,7 +20,7 @@ class ThirdRedTableViewCell: BaseTableViewCell {
     }
     
 
-    override func setCellData(sectionModel sectionModel:BaseTableViewSectionModel ,cellModel model: BaseTableViewCellModel) {
+    override func setCellData(_ sectionModel:BaseTableViewSectionModel ,_ model: BaseTableViewCellModel) {
         
         if model is ThirdRedCellModel{
             

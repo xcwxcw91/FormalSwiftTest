@@ -64,7 +64,7 @@ extension BaseTableViewController : UITableViewDataSource{
             cell = newCellClass.init(style: .default, reuseIdentifier: String(describing: item.cellReuseIdentifer))
         }
         
-        cell!.setCellData(sectionModel: section, cellModel: item)
+        cell!.setCellData(section, item)
         return cell!
     }
 }
