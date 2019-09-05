@@ -4,8 +4,13 @@ use_frameworks!
 
 target 'FormalSwiftTest' do
   
-  pod 'SnapKit', '~> 4.0.0'
-  pod 'Alamofire', '~> 4.7.3'
-  pod 'AlamofireObjectMapper', '~> 5.1.0'
+  pod 'SnapKit'                      #layout工具，类似OC的masonry
+  pod 'Alamofire'                    #http请求工具，类似AFnetworking
+  pod 'AlamofireObjectMapper'
+#  pod 'AlamofireImage'
+  pod 'AlamofireNetworkActivityIndicator'
+  #  pod 'SwiftyJSON'                 # swiftyJson与 objectMapper 都比较麻烦，故使用handyJson（使用的间接性类似于OC的 Mjextension）
 
+  pod 'HandyJSON'
+  
 end

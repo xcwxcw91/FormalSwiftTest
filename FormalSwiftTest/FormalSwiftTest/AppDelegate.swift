@@ -13,27 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        let tabbar = UITabBarController.init()
-        var i = 0
-        while i < 4 {
-            
-            i+=1
-            let vc = UIViewController.init()
-            vc.view.backgroundColor = i%2==0 ? .red : .yellow
-            vc.title = "page \(i)"
-            tabbar.addChild(vc)
-        }
+        
+        self.setup()
+        
         self.window?.rootViewController = STTabbarViewController.init()
         
-       
- 
         return true
+    }
+    
+    func setup(){
+        
+        SessionManager.default.retrier = MyRequestRetrier()
+        SessionManager.default.adapter = MyRequestAdapter()
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

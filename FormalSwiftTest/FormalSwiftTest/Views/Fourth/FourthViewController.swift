@@ -14,8 +14,25 @@ class FourthViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        getData()
+        
     }
     
+    
+    func getData(){
+         
+        let api = "/test/list"
+ 
+        RequestTool.requestDataWithParams(nil, api: api, nil, success: { (result) in
+            
+            let jsonToModel = FourthModel.deserialize(from: result.data as? Dictionary , designatedPath : "data")
+            
+            print("取到的model \(jsonToModel)")
+            
+        }) { (msg, code) in
+            
+        }
+    }
 
     /*
     // MARK: - Navigation

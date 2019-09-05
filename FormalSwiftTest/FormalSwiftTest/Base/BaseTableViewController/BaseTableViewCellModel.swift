@@ -20,14 +20,9 @@ protocol BaseTableViewCellModelProtocol  {
 
 }
 
-class BaseTableViewCellModel : BaseTableViewCellModelProtocol, Equatable{
+class BaseTableViewCellModel : BaseTableViewCellModelProtocol{
     
-    static func == (lhs: BaseTableViewCellModel, rhs: BaseTableViewCellModel) -> Bool {
-        
-        return lhs === rhs //=== 用于比较内存是否一致
-    }
-    
-    
+
     fileprivate var _cellClass : UITableViewCell.Type?
     var cellClass: UITableViewCell.Type{
         
@@ -75,7 +70,13 @@ class BaseTableViewCellModel : BaseTableViewCellModelProtocol, Equatable{
 }
 
 
-
+extension BaseTableViewCellModel : Equatable{
+    
+    static func == (lhs: BaseTableViewCellModel, rhs: BaseTableViewCellModel) -> Bool {
+        
+        return lhs === rhs //=== 用于比较内存是否一致
+    }
+}
     
    
 

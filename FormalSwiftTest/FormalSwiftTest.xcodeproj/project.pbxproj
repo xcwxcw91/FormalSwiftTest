@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9FE2815C231E47ED0005D38C /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2815B231E47ED0005D38C /* SecondModel.swift */; };
-		9FE28160231E64240005D38C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE2815F231E64240005D38C /* Alamofire.framework */; };
-		9FE28162231E64240005D38C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE28161231E64240005D38C /* SnapKit.framework */; };
 		9FE28165231F4DCC0005D38C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE28164231F4DCC0005D38C /* BaseTableViewController.swift */; };
 		9FE28167231F4E240005D38C /* BaseTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE28166231F4E240005D38C /* BaseTableViewCellModel.swift */; };
 		9FE28169231F4F300005D38C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE28168231F4F300005D38C /* BaseTableViewCell.swift */; };
@@ -17,6 +15,10 @@
 		9FE2816E231F5DA60005D38C /* ThirdRedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2816D231F5DA60005D38C /* ThirdRedTableViewCell.swift */; };
 		9FE28170231F5DB30005D38C /* ThirdGreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2816F231F5DB30005D38C /* ThirdGreenTableViewCell.swift */; };
 		9FE28172231F65FD0005D38C /* BaseTableViewSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE28171231F65FD0005D38C /* BaseTableViewSectionModel.swift */; };
+		9FE281772320B54B0005D38C /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE281762320B54B0005D38C /* RequestTool.swift */; };
+		9FE281792320B6810005D38C /* FormalSwiftTest_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE281782320B6810005D38C /* FormalSwiftTest_Header.swift */; };
+		9FE2817B2320B89E0005D38C /* BaseRequestResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2817A2320B89E0005D38C /* BaseRequestResultModel.swift */; };
+		9FE2817D232104CE0005D38C /* FourthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2817C232104CE0005D38C /* FourthModel.swift */; };
 		A6FECED907BAB2ADA82BD2C8 /* Pods_FormalSwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AE646120DBFA89A69AB976 /* Pods_FormalSwiftTest.framework */; };
 		BA300A70231E0F9B001642A0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA300A6F231E0F9B001642A0 /* BaseViewController.swift */; };
 		BA300A73231E31BE001642A0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA300A72231E31BE001642A0 /* CustomTableViewCell.swift */; };
@@ -65,6 +67,11 @@
 		9FE2816D231F5DA60005D38C /* ThirdRedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdRedTableViewCell.swift; sourceTree = "<group>"; };
 		9FE2816F231F5DB30005D38C /* ThirdGreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdGreenTableViewCell.swift; sourceTree = "<group>"; };
 		9FE28171231F65FD0005D38C /* BaseTableViewSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewSectionModel.swift; sourceTree = "<group>"; };
+		9FE281762320B54B0005D38C /* RequestTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTool.swift; sourceTree = "<group>"; };
+		9FE281782320B6810005D38C /* FormalSwiftTest_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalSwiftTest_Header.swift; sourceTree = "<group>"; };
+		9FE2817A2320B89E0005D38C /* BaseRequestResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestResultModel.swift; sourceTree = "<group>"; };
+		9FE2817C232104CE0005D38C /* FourthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModel.swift; sourceTree = "<group>"; };
+		9FE2817E23210D740005D38C /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3AE646120DBFA89A69AB976 /* Pods_FormalSwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormalSwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA300A6F231E0F9B001642A0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BA300A72231E31BE001642A0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,8 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE28160231E64240005D38C /* Alamofire.framework in Frameworks */,
-				9FE28162231E64240005D38C /* SnapKit.framework in Frameworks */,
 				A6FECED907BAB2ADA82BD2C8 /* Pods_FormalSwiftTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +126,7 @@
 		2A4498C969A822ACF5C8D134 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FE2817E23210D740005D38C /* HandyJSON.framework */,
 				9FE2815F231E64240005D38C /* Alamofire.framework */,
 				9FE28161231E64240005D38C /* SnapKit.framework */,
 				A3AE646120DBFA89A69AB976 /* Pods_FormalSwiftTest.framework */,
@@ -165,6 +171,7 @@
 		9FE28163231F4DB50005D38C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9FE281752320AFB40005D38C /* Request */,
 				9FE28173231F80570005D38C /* BaseTableViewController */,
 			);
 			path = Base;
@@ -190,6 +197,24 @@
 				9FE28168231F4F300005D38C /* BaseTableViewCell.swift */,
 			);
 			path = BaseTableViewController;
+			sourceTree = "<group>";
+		};
+		9FE281742320A6530005D38C /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				BAF1DD9A231CAA4200DB04C8 /* FourthViewController.swift */,
+				9FE2817C232104CE0005D38C /* FourthModel.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
+		9FE281752320AFB40005D38C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9FE281762320B54B0005D38C /* RequestTool.swift */,
+				9FE2817A2320B89E0005D38C /* BaseRequestResultModel.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		BA300A71231E31A0001642A0 /* Second */ = {
@@ -235,6 +260,7 @@
 				BAE8DD18231373C900670149 /* Assets.xcassets */,
 				BAE8DD1A231373C900670149 /* LaunchScreen.storyboard */,
 				BAE8DD1D231373C900670149 /* Info.plist */,
+				9FE281782320B6810005D38C /* FormalSwiftTest_Header.swift */,
 			);
 			path = FormalSwiftTest;
 			sourceTree = "<group>";
@@ -260,12 +286,12 @@
 		BAE8DD3F231373E400670149 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FE281742320A6530005D38C /* Fourth */,
 				9FE2816C231F558F0005D38C /* Third */,
 				BA300A71231E31A0001642A0 /* Second */,
 				BAE8DD4023137A4700670149 /* PageOneViewController.swift */,
 				BAF1DD92231CA9D200DB04C8 /* STTabbarViewController.swift */,
 				BAF1DD94231CAA2700DB04C8 /* FirstViewController.swift */,
-				BAF1DD9A231CAA4200DB04C8 /* FourthViewController.swift */,
 				BA300A6F231E0F9B001642A0 /* BaseViewController.swift */,
 			);
 			path = Views;
@@ -454,17 +480,21 @@
 				BAE8DD12231373C700670149 /* AppDelegate.swift in Sources */,
 				BAF1DD9B231CAA4200DB04C8 /* FourthViewController.swift in Sources */,
 				9FE28169231F4F300005D38C /* BaseTableViewCell.swift in Sources */,
+				9FE281772320B54B0005D38C /* RequestTool.swift in Sources */,
 				9FE2815C231E47ED0005D38C /* SecondModel.swift in Sources */,
+				9FE281792320B6810005D38C /* FormalSwiftTest_Header.swift in Sources */,
 				BAF1DD97231CAA3000DB04C8 /* SecondViewController.swift in Sources */,
 				9FE28165231F4DCC0005D38C /* BaseTableViewController.swift in Sources */,
 				BA300A73231E31BE001642A0 /* CustomTableViewCell.swift in Sources */,
 				9FE28167231F4E240005D38C /* BaseTableViewCellModel.swift in Sources */,
 				BA300A70231E0F9B001642A0 /* BaseViewController.swift in Sources */,
+				9FE2817D232104CE0005D38C /* FourthModel.swift in Sources */,
 				BAF1DD99231CAA3A00DB04C8 /* ThirdViewController.swift in Sources */,
 				BA300A75231E34C7001642A0 /* DetailTableViewCell.swift in Sources */,
 				BAF1DD95231CAA2700DB04C8 /* FirstViewController.swift in Sources */,
 				9FE28172231F65FD0005D38C /* BaseTableViewSectionModel.swift in Sources */,
 				9FE2816E231F5DA60005D38C /* ThirdRedTableViewCell.swift in Sources */,
+				9FE2817B2320B89E0005D38C /* BaseRequestResultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,9 +672,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D2VHJK7FFC;
+				DEVELOPMENT_TEAM = 96JC9DZ6E3;
 				INFOPLIST_FILE = FormalSwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,9 +694,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D2VHJK7FFC;
+				DEVELOPMENT_TEAM = 96JC9DZ6E3;
 				INFOPLIST_FILE = FormalSwiftTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
