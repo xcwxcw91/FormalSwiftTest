@@ -79,13 +79,9 @@ public class RequestTool: NSObject {
                 
                 print(json)
                 
-                let result = BaseRequestResultModel()
-                result.code = 200
-                result.success = true
-                result.message = "success"
-                result.data = json
-                
-                successBlock(result)
+                let result = BaseRequestResultModel.deserialize(from: json as? Dictionary)
+    
+                successBlock(result ?? BaseRequestResultModel())
                 
                 break
                 

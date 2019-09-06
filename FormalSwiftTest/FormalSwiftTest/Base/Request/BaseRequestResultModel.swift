@@ -8,12 +8,13 @@
 
 import UIKit
 
-class BaseRequestResultModel: NSObject {
+class BaseRequestResultModel: HandyJSON {
 
-    public var code : Int = 0
-    public var message : String = ""
-    public var success : Bool = true
-    public var data : Any? = nil
+    var status : Int?
+    var message : String?
+    var data : Any?
     
-    
+    required init( ) {
+        
+    }
 }

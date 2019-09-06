@@ -34,6 +34,11 @@ class BaseTableViewController: UIViewController {
         
         return .plain
     }
+    
+    public func reload(){
+        
+        self.tableView.reloadData()
+    }
 }
 
 //MARK: - TableView Delegate && Datasource
@@ -62,6 +67,9 @@ extension BaseTableViewController : UITableViewDataSource{
             let newCellClass = item.cellClass as! BaseTableViewCell.Type
             
             cell = newCellClass.init(style: .default, reuseIdentifier: String(describing: item.cellReuseIdentifer))
+            
+            
+//瞎写的init方法，用这个也可以  cell = newCellClass.init(arg0: String(describing: item.cellReuseIdentifer), arg1 :.default)
         }
         
         cell!.setCellData(section, item)

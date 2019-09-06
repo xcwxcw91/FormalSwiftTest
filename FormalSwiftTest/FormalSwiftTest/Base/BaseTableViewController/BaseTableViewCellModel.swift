@@ -22,8 +22,7 @@ protocol BaseTableViewCellModelProtocol  {
 
 class BaseTableViewCellModel : BaseTableViewCellModelProtocol{
     
-
-    fileprivate var _cellClass : UITableViewCell.Type?
+    var _cellClass : UITableViewCell.Type?
     var cellClass: UITableViewCell.Type{
         
         get{
@@ -34,29 +33,29 @@ class BaseTableViewCellModel : BaseTableViewCellModelProtocol{
         }
     }
     
-    fileprivate var _reuseIdentifer : String = String(describing: BaseTableViewCell.self)
+    var _reuseIdentifer : String?
     var cellReuseIdentifer: String{
         
         get{
-            return _reuseIdentifer
+            return _reuseIdentifer ?? String(describing: cellClass)//reuseidentifer直接使用cellClass，子类若无特殊自定义需求，则无需重写该属性
         }
         set{
             _reuseIdentifer = newValue
         }
     }
     
-    fileprivate var _rowHeight = 44.0
+    var _rowHeight : CGFloat?
     var rowHeight: CGFloat{
         
         get{
-            return CGFloat(_rowHeight)
+            return CGFloat(_rowHeight ?? 44)
         }
         set{
-            _rowHeight = Double(newValue)
+            _rowHeight = newValue
         }
     }
     
-    fileprivate var _cellJumpClassName : AnyClass?
+    var _cellJumpClassName : AnyClass?
     var cellJumpClassName: AnyClass?{
         
         get{

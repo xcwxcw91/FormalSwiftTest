@@ -14,25 +14,13 @@ class ThirdRedCellModel: BaseTableViewCellModel {
     var subtitle : String?
     var imageName : String?
 
-    fileprivate var _redCellClass: UITableViewCell.Type?
     override var cellClass: UITableViewCell.Type{
 
         set{
-            _redCellClass = newValue
+            _cellClass = newValue
         }
         get{
-            return _redCellClass ?? ThirdRedTableViewCell.self
-        }
-    }
-
-    fileprivate var _cellReuseIdentifer : String?
-    override var cellReuseIdentifer: String{
-
-        get{
-            return _cellReuseIdentifer ?? String(describing: ThirdRedTableViewCell.self)
-        }
-        set{
-            _cellReuseIdentifer = newValue
+            return _cellClass ?? ThirdRedTableViewCell.self
         }
     }
 }
@@ -43,37 +31,23 @@ class ThirdGreenCellModel: BaseTableViewCellModel {
     var greenSubtitle : String?
     var greenImageName : String?
     
-    fileprivate var _greenCellClass: UITableViewCell.Type?
-    override var cellClass: UITableViewCell.Type{
+     override var cellClass: UITableViewCell.Type{
         
         set{
-            _greenCellClass = newValue
+            _cellClass = newValue
         }
         get{
-            return _greenCellClass ?? ThirdGreenTableViewCell.self
+            return _cellClass ?? ThirdGreenTableViewCell.self
         }
     }
-    
-    fileprivate var _cellReuseIdentifer : String?
-    override var cellReuseIdentifer: String{
-        
-        get{
-            return _cellReuseIdentifer ?? String(describing: ThirdGreenTableViewCell.self)
-        }
-        set{
-            _cellReuseIdentifer = newValue
-        }
-    }
-    
-    fileprivate var _rowHeight = 100.0
+   
     override var rowHeight: CGFloat{
         
         get{
-            return CGFloat(_rowHeight)
+            return CGFloat(_rowHeight ?? 100)
         }
         set{
-            _rowHeight = Double(newValue)
-            print(_rowHeight)
+            _rowHeight = newValue
         }
     }
 }

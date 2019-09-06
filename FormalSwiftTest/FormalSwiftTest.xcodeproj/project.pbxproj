@@ -19,6 +19,8 @@
 		9FE281792320B6810005D38C /* FormalSwiftTest_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE281782320B6810005D38C /* FormalSwiftTest_Header.swift */; };
 		9FE2817B2320B89E0005D38C /* BaseRequestResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2817A2320B89E0005D38C /* BaseRequestResultModel.swift */; };
 		9FE2817D232104CE0005D38C /* FourthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2817C232104CE0005D38C /* FourthModel.swift */; };
+		9FE281812321EC6F0005D38C /* FourthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE281802321EC6F0005D38C /* FourthTableViewCell.swift */; };
+		9FE281832321F8130005D38C /* Fourth_one_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE281822321F8130005D38C /* Fourth_one_TableViewCell.swift */; };
 		A6FECED907BAB2ADA82BD2C8 /* Pods_FormalSwiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AE646120DBFA89A69AB976 /* Pods_FormalSwiftTest.framework */; };
 		BA300A70231E0F9B001642A0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA300A6F231E0F9B001642A0 /* BaseViewController.swift */; };
 		BA300A73231E31BE001642A0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA300A72231E31BE001642A0 /* CustomTableViewCell.swift */; };
@@ -72,6 +74,8 @@
 		9FE2817A2320B89E0005D38C /* BaseRequestResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestResultModel.swift; sourceTree = "<group>"; };
 		9FE2817C232104CE0005D38C /* FourthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthModel.swift; sourceTree = "<group>"; };
 		9FE2817E23210D740005D38C /* HandyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE281802321EC6F0005D38C /* FourthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTableViewCell.swift; sourceTree = "<group>"; };
+		9FE281822321F8130005D38C /* Fourth_one_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fourth_one_TableViewCell.swift; sourceTree = "<group>"; };
 		A3AE646120DBFA89A69AB976 /* Pods_FormalSwiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormalSwiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA300A6F231E0F9B001642A0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BA300A72231E31BE001642A0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 			children = (
 				BAF1DD9A231CAA4200DB04C8 /* FourthViewController.swift */,
 				9FE2817C232104CE0005D38C /* FourthModel.swift */,
+				9FE281802321EC6F0005D38C /* FourthTableViewCell.swift */,
+				9FE281822321F8130005D38C /* Fourth_one_TableViewCell.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 			files = (
 				BAF1DD93231CA9D200DB04C8 /* STTabbarViewController.swift in Sources */,
 				9FE2816B231F54DD0005D38C /* ThirdCellModel.swift in Sources */,
+				9FE281812321EC6F0005D38C /* FourthTableViewCell.swift in Sources */,
 				9FE28170231F5DB30005D38C /* ThirdGreenTableViewCell.swift in Sources */,
 				BAE8DD4123137A4700670149 /* PageOneViewController.swift in Sources */,
 				BAE8DD12231373C700670149 /* AppDelegate.swift in Sources */,
@@ -492,6 +499,7 @@
 				BAF1DD99231CAA3A00DB04C8 /* ThirdViewController.swift in Sources */,
 				BA300A75231E34C7001642A0 /* DetailTableViewCell.swift in Sources */,
 				BAF1DD95231CAA2700DB04C8 /* FirstViewController.swift in Sources */,
+				9FE281832321F8130005D38C /* Fourth_one_TableViewCell.swift in Sources */,
 				9FE28172231F65FD0005D38C /* BaseTableViewSectionModel.swift in Sources */,
 				9FE2816E231F5DA60005D38C /* ThirdRedTableViewCell.swift in Sources */,
 				9FE2817B2320B89E0005D38C /* BaseRequestResultModel.swift in Sources */,
