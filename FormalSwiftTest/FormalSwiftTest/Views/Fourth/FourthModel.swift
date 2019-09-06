@@ -35,7 +35,7 @@ class FourthModelItem : BaseTableViewCellModel , HandyJSON {
         
     }
     
-    //MARK: - 设置对于的cell信息
+    //MARK: - 设置对应的cell信息
     override var cellClass: UITableViewCell.Type{
         
         get{

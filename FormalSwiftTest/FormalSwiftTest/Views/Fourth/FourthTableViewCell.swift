@@ -51,7 +51,19 @@ class FourthTableViewCell: BaseTableViewCell {
             
         nameLabel.text = model.name
         describeLabel.text = model.description
-        avatar.image = UIImage(named: "cake")
+        
+        if let url = model.headimg {
+            
+            avatar.kf.indicatorType = .activity
+            
+//            let processor = BlurImageProcessor(blurRadius: 20)//在图片上加blur毛玻璃效果
+//            avatar.kf.setImage(with: URL(string: url), placeholder: nil, options: [.processor(processor)], progressBlock: { (received, all) in
+
+            avatar.kf.setImage(with: URL(string: url), placeholder: nil, options: [.transition(.fade(0.4))], progressBlock: { (received, all) in
+            
+            }, completionHandler: nil)//加了0.4秒的渐隐
+        }
+      
     }
     
     override func prepareForReuse() {

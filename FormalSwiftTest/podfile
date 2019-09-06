@@ -6,11 +6,13 @@ target 'FormalSwiftTest' do
   
   pod 'SnapKit'                      #layout工具，类似OC的masonry
   pod 'Alamofire'                    #http请求工具，类似AFnetworking
+  #  pod 'Moya'                      # alamofire的高层封装，不需要自己写蹩脚的httpManager了
   pod 'AlamofireObjectMapper'
 #  pod 'AlamofireImage'
   pod 'AlamofireNetworkActivityIndicator'
-  #  pod 'SwiftyJSON'                 # swiftyJson与 objectMapper 都比较麻烦，故使用handyJson（使用的间接性类似于OC的 Mjextension）
+  #  pod 'SwiftyJSON'                # swiftyJson与 objectMapper 都比较麻烦，故使用handyJson（使用的间接性类似于OC的 Mjextension）
 
-  pod 'HandyJSON'
-  
+  pod 'HandyJSON'                    # json与model转换
+  pod 'Kingfisher'                   # 喵神写的图片异步
+  pod 'SCLAlertView'                 #兼容alertVieW/AlertController的多功能弹框
 end

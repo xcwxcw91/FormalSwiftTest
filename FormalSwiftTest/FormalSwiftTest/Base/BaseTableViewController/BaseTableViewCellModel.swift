@@ -65,7 +65,6 @@ class BaseTableViewCellModel : BaseTableViewCellModelProtocol{
             _cellJumpClassName = newValue
         }
     }
-    
 }
 
 

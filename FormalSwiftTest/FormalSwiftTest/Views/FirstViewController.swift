@@ -26,6 +26,7 @@ class FirstViewController: UIViewController {
     @objc dynamic func btnAction() ->Void{
         
         print("btn clicked")
+        SCLAlertView().showInfo("Important info", subTitle: "You are great")
     }
     
     //MARK: - Lazy load

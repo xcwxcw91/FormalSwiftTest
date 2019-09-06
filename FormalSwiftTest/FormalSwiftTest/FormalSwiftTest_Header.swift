@@ -12,3 +12,7 @@ import Foundation
 @_exported import SnapKit
 @_exported import Alamofire
 @_exported import HandyJSON
+@_exported import Kingfisher
+@_exported import SCLAlertView
+
+ 

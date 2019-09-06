@@ -51,7 +51,12 @@ class Fourth_one_TableViewCell: BaseTableViewCell {
         
         nameLabel.text = model.name
         describeLabel.text = model.description
-        avatar.image = UIImage(named: "Swift_logo")
+        if let url = model.headimg {
+            
+            avatar.kf.setImage(with: URL(string: url), placeholder: nil, options: nil, progressBlock: { (downloaded, total) in
+                
+            }, completionHandler: nil)
+        }
     }
     
     override func prepareForReuse() {

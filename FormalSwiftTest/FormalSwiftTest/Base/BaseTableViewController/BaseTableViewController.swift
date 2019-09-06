@@ -37,7 +37,10 @@ class BaseTableViewController: UIViewController {
     
     public func reload(){
         
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            
+            self.tableView.reloadData()
+        }
     }
 }
 
