@@ -14,5 +14,11 @@ import Foundation
 @_exported import HandyJSON
 @_exported import Kingfisher
 @_exported import SCLAlertView
+@_exported import RxSwift
+@_exported import RxCocoa
 
- 
+
+public let kScreenWidth = UIScreen.main.bounds.size.width <=  UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height;
+
+public let kScreenHeight = UIScreen.main.bounds.size.height >=  UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width;
+

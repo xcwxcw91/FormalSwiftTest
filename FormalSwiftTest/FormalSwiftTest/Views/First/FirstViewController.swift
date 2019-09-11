@@ -21,6 +21,14 @@ class FirstViewController: UIViewController {
     func setup() -> Void{
         
         self.view.addSubview(self.lazyBtn)
+        self.lazyBtn
+            .rx
+            .tap
+            .subscribe(onNext: {
+            print("btn clicked")
+            
+        }).disposed(by: DisposeBag())
+        
     }
     
     @objc dynamic func btnAction() ->Void{
@@ -37,7 +45,7 @@ class FirstViewController: UIViewController {
         btn.backgroundColor = .cyan
         btn.showsTouchWhenHighlighted = true
         
-        btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+//        btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
      
         return btn
     }()

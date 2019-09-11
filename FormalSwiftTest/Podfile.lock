@@ -8,6 +8,12 @@ PODS:
   - HandyJSON (5.0.0)
   - Kingfisher (4.10.1)
   - ObjectMapper (3.5.1)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
   - SCLAlertView (0.8)
   - SnapKit (4.0.1)
 
@@ -17,6 +23,8 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - HandyJSON
   - Kingfisher
+  - RxCocoa
+  - RxSwift
   - SCLAlertView
   - SnapKit
 
@@ -28,6 +36,9 @@ SPEC REPOS:
     - HandyJSON
     - Kingfisher
     - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SCLAlertView
     - SnapKit
 
@@ -38,9 +49,12 @@ SPEC CHECKSUMS:
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 0b39c8375689b56e28e2b2b1782dc8f5e985bbd2
+PODFILE CHECKSUM: a26e121656f1a9363fe58d280864ff818551051d
 
 COCOAPODS: 1.7.5

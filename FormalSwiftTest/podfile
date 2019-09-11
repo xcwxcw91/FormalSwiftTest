@@ -15,4 +15,7 @@ target 'FormalSwiftTest' do
   pod 'HandyJSON'                    # json与model转换
   pod 'Kingfisher'                   # 喵神写的图片异步
   pod 'SCLAlertView'                 #兼容alertVieW/AlertController的多功能弹框
+  pod 'RxSwift'                      #RxSwift
+  pod 'RxCocoa'
+  
 end

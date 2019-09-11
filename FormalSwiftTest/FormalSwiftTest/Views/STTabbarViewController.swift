@@ -45,7 +45,11 @@ class STTabbarViewController: UITabBarController {
         fourth.view.backgroundColor = .purple
         fourth.title = "fourth"
         
-        self.setViewControllers([first, second, third, fourth], animated: true)
+        let fifth  = FifthViewController()
+        fifth.view.backgroundColor = .white
+        fifth.title = "RxSwiftTest"
+        
+        self.setViewControllers([first, second, third, fourth, UINavigationController.init(rootViewController: fifth)], animated: true)
         
         
     }

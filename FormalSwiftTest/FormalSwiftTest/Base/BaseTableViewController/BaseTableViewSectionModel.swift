@@ -12,6 +12,7 @@ import Foundation
 class BaseTableViewSectionModel: NSObject {
     
     private var objects  = [BaseTableViewCellModel]()
+    
     private var unfairLock = os_unfair_lock()
     private var spinLock = OS_SPINLOCK_INIT
     

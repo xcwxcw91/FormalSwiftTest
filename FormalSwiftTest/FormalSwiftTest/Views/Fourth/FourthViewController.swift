@@ -33,16 +33,24 @@ class FourthViewController: BaseTableViewController {
             let jsonToModel = FourthModel.deserialize(from: result.data as? Dictionary)
             
             print("取到的model \(String(describing: jsonToModel?.list?.first?.headimg))")
-//            jsonToModel?.list?[2].useFourth_one_Cell = true
-//            jsonToModel?.list?[4].useFourth_one_Cell = true
-//            jsonToModel?.list?[6].useFourth_one_Cell = true
-//            jsonToModel?.list?[8].useFourth_one_Cell = true
+
+            // for in
+            for element in (jsonToModel?.list)!{
+                
+                element.name = "xcw"
+            }
+        
+            // enumerate
+            for (index,element) in (jsonToModel?.list?.enumerated())!{
+                
+                if index % 2==0{
+                    
+                    element.useFourth_one_Cell = true
+                }
+            }
 
             self.sectionModel.addCellModelsFromArray(jsonToModel?.list)
-            self.sectionModel.addCellModelsFromArray(jsonToModel?.list)
-            self.sectionModel.addCellModelsFromArray(jsonToModel?.list)
-            self.sectionModel.addCellModelsFromArray(jsonToModel?.list)
-
+            
             self.reload()
             
         }) { (msg, code) in
