@@ -37,10 +37,16 @@ class BaseTableViewController: UIViewController {
     
     public func reload(){
         
+        self.implementOtherSetWhenReload(datasource: dataSource)
         DispatchQueue.main.async {
             
             self.tableView.reloadData()
         }
+    }
+    
+    //子类在刷新数据的时候，可以把相关的UI控件根据因数据源变化的代码放在这里，MVVM思想
+    public func implementOtherSetWhenReload(datasource: [BaseTableViewSectionModel]){
+        
     }
 }
 

@@ -61,6 +61,7 @@ class FifthViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
         self.userNameOutlet.text = "userName has to be at least \(self.minimumUserNameLength) characters"
         self.passwordOutlet.text = "password has to be at least \(self.minimumPasswordLength) characters"
 

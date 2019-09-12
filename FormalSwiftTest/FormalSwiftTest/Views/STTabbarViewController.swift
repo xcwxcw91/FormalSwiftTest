@@ -30,26 +30,24 @@ class STTabbarViewController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         
         let first = FirstViewController()
-        first.view.backgroundColor = .red
         first.title = "first"
         
         let second = SecondViewController()
-        second.view.backgroundColor = .yellow
         second.title = "second"
         
         let third = ThirdViewController()
-        third.view.backgroundColor = .green
         third.title = "third"
         
         let fourth = FourthViewController()
-        fourth.view.backgroundColor = .purple
         fourth.title = "fourth"
         
         let fifth  = FifthViewController()
-        fifth.view.backgroundColor = .white
         fifth.title = "RxSwiftTest"
         
-        self.setViewControllers([first, second, third, fourth, UINavigationController.init(rootViewController: fifth)], animated: true)
+        self.setViewControllers([
+            UINavigationController.init(rootViewController: first), UINavigationController.init(rootViewController: second),
+                                 UINavigationController.init(rootViewController: third),
+                                 UINavigationController.init(rootViewController: fourth), UINavigationController.init(rootViewController: fifth)], animated: true)
         
         
     }

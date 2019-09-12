@@ -22,3 +22,4 @@ public let kScreenWidth = UIScreen.main.bounds.size.width <=  UIScreen.main.boun
 
 public let kScreenHeight = UIScreen.main.bounds.size.height >=  UIScreen.main.bounds.size.width ? UIScreen.main.bounds.size.height : UIScreen.main.bounds.size.width;
 
+ 
