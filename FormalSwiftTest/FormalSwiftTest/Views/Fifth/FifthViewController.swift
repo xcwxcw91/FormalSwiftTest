@@ -8,6 +8,7 @@
 
 import UIKit
 
+//MVC的模式使用RX
 class FifthViewController: UIViewController {
     
     let minimumUserNameLength = 5
@@ -75,6 +76,8 @@ class FifthViewController: UIViewController {
     }
     
     func setup(){
+        //一般的套路是先创建一个observable，在用此来订阅事件。 RxCocoa封装了UI，通过UI方法即可以得到observable。 RX也提供了create方法（及of， from方法），用于手动创建observable
+        
         
         //0
         //        let userNameValid = self.userNameTf.rx.text.orEmpty.map{$0.count >= self.minimumUserNameLength}.share(replay: 1) 这段代码等同下面两段之和
@@ -92,7 +95,52 @@ class FifthViewController: UIViewController {
         //1
         let passwordValid = self.passwordTf.rx.text.orEmpty.map{$0.count >= self.minimumPasswordLength}.share(replay:1)
         
-        passwordValid.bind(to: passwordOutlet.rx.isHidden).disposed(by: disposeBag)
+        //订阅 passwordValid的方式1，最原始的方式
+        passwordValid.subscribe{
+            
+            event in
+            
+//            switch event{
+//
+//            case .next(let value): break
+//            case .completed: break
+//            case .error(let err): break
+//
+//            }
+            
+            
+            print("event",event)
+            print("event\(event.element!)")
+        }.disposed(by: disposeBag)
+        
+        //订阅 passwordValid的方式2，常规方式，比较全面
+        passwordValid.subscribe(
+            
+            onNext: {
+            
+            //这里的next就是个bool值
+            [weak self] (element) in
+            
+            print("next\(element)")
+            
+                self!.passwordOutlet.isHidden = element
+                
+           },
+            onError:{
+                error in
+                print(error)
+          },
+            
+            onCompleted:{
+                
+           },
+            onDisposed:{}
+            
+        )
+        .disposed(by: disposeBag)//这样的写法与bindto效果一样，也就能理解了所谓的observable的原理，套壳的KVO
+        
+        //订阅 passwordValid的方式3， 由于RXCocoa封装了UI层，可以用这个方法来将event与UI绑定
+//        passwordValid.bind(to: passwordOutlet.rx.isHidden).disposed(by: disposeBag)
         
         
         //2
@@ -100,7 +148,18 @@ class FifthViewController: UIViewController {
         
         submitBtnValid.bind(to: self.submitBtn.rx.isEnabled).disposed(by: disposeBag)
         
-        submitBtn.rx.tap.subscribe(onNext: { [weak self] in self?.showAlert() })
+        //submitBtn.rx.tap就是个observable，已经由RXCocoa封装，此处直接订阅即可. tap => ControlEventType => ObservableType
+        submitBtn.rx.tap.subscribe(
+            
+            onNext: {
+                [weak self] in
+//                self?.showAlert()
+                
+                self?.view.endEditing(true)
+
+                self?.navigationController?.pushViewController(Fifth_MVVM_ViewController(), animated: true)
+                
+        })
             .disposed(by: disposeBag)
     }
     
@@ -121,3 +180,5 @@ class FifthViewController: UIViewController {
     */
 
 }
+
+

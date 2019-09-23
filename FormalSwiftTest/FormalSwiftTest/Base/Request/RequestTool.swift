@@ -23,9 +23,9 @@ public enum RequestErrorType : Int{
     case paramInvalid = 403
 }
 
-typealias RequestSuccessBlock = (_ result : BaseRequestResultModel) -> Void
+typealias RequestSuccessBlock = ((_ result : BaseRequestResultModel) -> Void)
 
-typealias RequestFailureBlock = (_ message: String, _ errorCode : RequestErrorType) -> Void
+typealias RequestFailureBlock = ((_ message: String, _ errorCode : RequestErrorType) -> Void)
 
 
 // 自定义请求的adapter

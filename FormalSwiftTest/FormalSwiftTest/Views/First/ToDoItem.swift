@@ -14,7 +14,7 @@ class ToDoItem: NSObject , NSCoding{
     var isFinished = false
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "name")
+        aCoder.encode(name, forKey: "name") 
         aCoder.encode(isFinished, forKey: "isFinished")
     }
     
